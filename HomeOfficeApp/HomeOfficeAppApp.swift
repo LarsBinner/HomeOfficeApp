@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
-struct HomeOfficeAppApp: App {
+struct HomeOfficeApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
