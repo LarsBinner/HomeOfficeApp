@@ -37,4 +37,13 @@ class TaskDatabase: ObservableObject {
         }
     }
     
+    // Funktion zum Hinzufügen einer Task zur Firebase Datenbank
+    func addToDatabase(_ task: Task) {
+        do {
+            let _ = try database.collection("tasks").addDocument(from: task)
+        }
+        catch {
+            fatalError("Error adding task")
+        }
+    }
 }

@@ -27,15 +27,22 @@ class TaskListViewModel: ObservableObject  {
     }
 
     func addTask(task: Task) {
-        let taskViewModel = TaskEntryViewModel(task: task)
-        self.taskEntryViewModels.append(taskViewModel)
+        taskDatabase.addToDatabase(task)
     }
 }
 
 
-/* Old Code for taskExample Liste replaced by taskDatabase Firestore connection
+/* Old Code for taskExample List replaced by taskDatabase Firestore connection
 init() {
  self.taskEntryViewModels = taskExamples.map {task in
      TaskEntryViewModel(task: task)
  }
-} */
+}
+ */
+
+/* Old Code for adding task by example list in Task Model replaced by Firestore
+func addTask(task: Task) {
+    let taskViewModel = TaskEntryViewModel(task: task)
+    self.taskEntryViewModels.append(taskViewModel)
+}
+*/
