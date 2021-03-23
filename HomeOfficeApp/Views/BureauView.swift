@@ -3,7 +3,7 @@
 //  HomeOfficeApp
 //
 //  Created by Lars Binner on 21.03.21.
-//
+//  Bureau tab view
 
 import SwiftUI
 

@@ -3,7 +3,7 @@
 //  HomeOfficeApp
 //
 //  Created by Lars Binner on 21.03.21.
-//
+//  View model for entry of tasks for To-DoView
 
 import Foundation
 import Combine
@@ -26,7 +26,7 @@ import Combine
             .store(in: &cancellables)
         
         $task
-          .map { task in
+          .compactMap { task in
             task.id
           }
             .assign(to: \.id, on: self)

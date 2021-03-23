@@ -3,7 +3,7 @@
 //  HomeOfficeApp
 //
 //  Created by Lars Binner on 21.03.21.
-//
+//  Home Screen for application
 
 
 import SwiftUI
