@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
@@ -20,8 +21,11 @@ class TaskDatabase: ObservableObject {
     
     // Funktion zum Laden der Tasks aus Firebase
     func loadingDatabase() {
+        let userId = Auth.auth().currentUser?.uid
+        
         database.collection("tasks")
             .order(by: "timestampCreated")
+            .whereField("userId", isEqualTo: userId)
             .addSnapshotListener { (querySnapshot, Error) in
             if let querySnapshot = querySnapshot {
                 self.tasks = querySnapshot.documents.compactMap { document in
@@ -42,7 +46,10 @@ class TaskDatabase: ObservableObject {
     // Funktion zum Hinzufügen einer Task zur Firebase Datenbank
     func addToDatabase(_ task: Task) {
         do {
-            let _ = try database.collection("tasks").addDocument(from: task)
+            // Add the current userId
+            var addedTask = task
+            addedTask.userId = Auth.auth().currentUser?.uid
+            let _ = try database.collection("tasks").addDocument(from: addedTask)
         }
         catch {
             fatalError("Error adding task")

@@ -14,6 +14,7 @@ struct Task: Codable, Identifiable {
     var title: String
     var finished: Bool
     @ServerTimestamp var timestampCreated : Timestamp? //Set Server Timestamp for right sorting
+    var userId : String?
 }
 
 let taskExamples = [
