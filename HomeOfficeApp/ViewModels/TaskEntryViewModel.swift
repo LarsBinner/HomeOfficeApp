@@ -11,6 +11,7 @@ import Combine
     class TaskEntryViewModel: ObservableObject, Identifiable  {
      
       @Published var task: Task
+      @Published var taskDatabase = TaskDatabase()
       var id: String = ""
       @Published var finishedState = ""
       private var cancellables = Set<AnyCancellable>()
@@ -30,6 +31,14 @@ import Combine
             task.id
           }
             .assign(to: \.id, on: self)
+            .store(in: &cancellables)
+        
+        $task
+            .dropFirst()
+            .debounce(for: 1.0, scheduler: RunLoop.main)
+            .sink {task in
+                self.taskDatabase.updateTask(task)
+            }
             .store(in: &cancellables)
     }
 }

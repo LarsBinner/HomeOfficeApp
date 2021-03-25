@@ -10,9 +10,10 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct Task: Codable, Identifiable {
-    @DocumentID var id: String?
+    @DocumentID var id: String? // Firebase Document ID e.g. "5AFED5..."
     var title: String
     var finished: Bool
+    @ServerTimestamp var timestampCreated : Timestamp? //Set Server Timestamp for right sorting
 }
 
 let taskExamples = [

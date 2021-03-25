@@ -20,7 +20,9 @@ class TaskDatabase: ObservableObject {
     
     // Funktion zum Laden der Tasks aus Firebase
     func loadingDatabase() {
-        database.collection("tasks").addSnapshotListener { (querySnapshot, Error) in
+        database.collection("tasks")
+            .order(by: "timestampCreated")
+            .addSnapshotListener { (querySnapshot, Error) in
             if let querySnapshot = querySnapshot {
                 self.tasks = querySnapshot.documents.compactMap { document in
                     //Fehler abfangen
@@ -44,6 +46,18 @@ class TaskDatabase: ObservableObject {
         }
         catch {
             fatalError("Error adding task")
+        }
+    }
+    
+    // Funktion zum Updaten einer Task in der Firebase Datenbank
+    func updateTask (_ task: Task) {
+        if let taskID = task.id {
+            do {
+                try database.collection("tasks").document(taskID).setData(from: task)
+            }
+            catch {
+                fatalError("Can´t update task:  \(error.localizedDescription)")
+            }
         }
     }
 }
