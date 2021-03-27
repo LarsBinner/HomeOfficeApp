@@ -9,7 +9,6 @@ import SwiftUI
 
 struct To_DoView: View {
     
-    let tasks = taskExamples
     @ObservedObject var taskListViewModel = TaskListViewModel()
     @State var showNewTask = false
     

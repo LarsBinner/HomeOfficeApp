@@ -23,6 +23,7 @@
 		4B655D2A2607A08300E04FE2 /* BureauModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D292607A08300E04FE2 /* BureauModel.swift */; };
 		4B655D2F2607A09A00E04FE2 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D2E2607A09A00E04FE2 /* TaskModel.swift */; };
 		4B6EB1DB260A471C000965CD /* TaskDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EB1DA260A471C000965CD /* TaskDatabase.swift */; };
+		4B768444260E0EA600EC962E /* BureauViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B768443260E0EA600EC962E /* BureauViewModel.swift */; };
 		65872B180A59E10BA394673F /* Pods_HomeOfficeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C13D322B0B50C2B58AE412 /* Pods_HomeOfficeApp.framework */; };
 		8EB6DC1F034F162DC2B84AF6 /* Pods_HomeOfficeApp_HomeOfficeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF774B4C6A6594DF26CFC931 /* Pods_HomeOfficeApp_HomeOfficeAppUITests.framework */; };
 		DF84596E1AB295864FFC9D5F /* Pods_HomeOfficeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91341974D6E24BCA512154 /* Pods_HomeOfficeAppTests.framework */; };
@@ -70,6 +71,7 @@
 		4B655D292607A08300E04FE2 /* BureauModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauModel.swift; sourceTree = "<group>"; };
 		4B655D2E2607A09A00E04FE2 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		4B6EB1DA260A471C000965CD /* TaskDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDatabase.swift; sourceTree = "<group>"; };
+		4B768443260E0EA600EC962E /* BureauViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauViewModel.swift; sourceTree = "<group>"; };
 		95D87EF3D98B653CBB97D4F2 /* Pods-HomeOfficeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeApp.release.xcconfig"; path = "Target Support Files/Pods-HomeOfficeApp/Pods-HomeOfficeApp.release.xcconfig"; sourceTree = "<group>"; };
 		A0C13D322B0B50C2B58AE412 /* Pods_HomeOfficeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOfficeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7027F370B759BE69BAF70C2 /* Pods-HomeOfficeApp-HomeOfficeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeApp-HomeOfficeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-HomeOfficeApp-HomeOfficeAppUITests/Pods-HomeOfficeApp-HomeOfficeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				4B655D1E2607A03700E04FE2 /* TaskEntryViewModel.swift */,
 				4B655D232607A05300E04FE2 /* TaskListViewModel.swift */,
+				4B768443260E0EA600EC962E /* BureauViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				4B655D0E26079F7400E04FE2 /* To-DoView.swift in Sources */,
 				4B655CF726079F1B00E04FE2 /* BureauView.swift in Sources */,
 				4B6EB1DB260A471C000965CD /* TaskDatabase.swift in Sources */,
+				4B768444260E0EA600EC962E /* BureauViewModel.swift in Sources */,
 				4B655D2F2607A09A00E04FE2 /* TaskModel.swift in Sources */,
 				4B655D1F2607A03700E04FE2 /* TaskEntryViewModel.swift in Sources */,
 				4B655D242607A05300E04FE2 /* TaskListViewModel.swift in Sources */,

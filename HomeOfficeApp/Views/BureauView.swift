@@ -9,45 +9,15 @@ import SwiftUI
 
 struct BureauView: View {
     
-    @State private var amountBureausEntry = 1
-    @State private var selectedPersons: Set<UUID> = []
+    let  childs: [Bureau] = [.group1, .group2]
     
     var body: some View {
-        VStack{
-        Text("Vorgesetzter")
-            .font(.largeTitle)
-            HStack {
-                Text("Büroauswahl")
-                    .font(.title2)
-                    .padding()
-                Spacer()
+        NavigationView {
+            List(childs, children: \.childs) { row in
+                Image(systemName: row.picture)
+                Text(row.name)
             }
-            HStack{
-                TextField("Anzahl Büros angeben", value: self.$amountBureausEntry, formatter: NumberFormatter())
-                    .padding()
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                Button(action: {
-                    print("button pressed")
-                })
-                {
-                    Text("Anwenden")
-                        .padding()
-                        .buttonStyle(BorderlessButtonStyle())
-                }
-            }
-            VStack {
-                HStack {
-                    Text("Büro 1")
-                    Spacer()
-                    EditButton()
-                }
-                .padding()
-                List(persons, selection: $selectedPersons){ person in
-                    Text(person.name)
-                }
-            }
-        Spacer()
+        .navigationTitle("Bürobelegung")
         }
     }
 }
@@ -57,4 +27,3 @@ struct Vorgesetzter_Previews: PreviewProvider {
         BureauView()
     }
 }
-

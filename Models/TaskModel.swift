@@ -17,8 +17,9 @@ struct Task: Codable, Identifiable {
     var userId : String?
 }
 
-let taskExamples = [
+// Nur zum ersten Test
+/* let taskExamples = [
     Task(title: "Erste Aufgabe", finished: true),
     Task(title: "Zweite Aufgabe", finished: false),
     Task(title: "Dritte Aufgabe", finished: false)
-]
+] */
