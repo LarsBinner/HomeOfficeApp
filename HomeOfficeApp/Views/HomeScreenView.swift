@@ -7,6 +7,8 @@
 
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct HomeScreenView: View {
     
@@ -28,7 +30,7 @@ struct HomeScreenView: View {
                     Text("To-Do")
                     Image(systemName: "doc")
             }
-            Text("Chat")
+            ChatView()
                 .tabItem {
                     Text("Chat")
                     Image(systemName: "text.bubble")

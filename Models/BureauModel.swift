@@ -5,24 +5,85 @@
 //  Created by Lars Binner on 21.03.21.
 //  Model for bureau
 
+import Firebase
+import FirebaseFirestore
+
 import Foundation
 
-struct Bureau : Identifiable {
-    let id = UUID()
-    let picture : String
-    let name: String
-    let childs : [Bureau]?
+struct BureauDataType: Identifiable {
+    var id: String
+    var msg: String
 }
 
-extension Bureau {
-    // Persons
-    static let person1 = Bureau(picture: "1.circle", name: "Lars Binner", childs: nil)
-    static let person2 = Bureau(picture: "1.circle", name: "Malte Nienaber", childs: nil)
-    static let person3 = Bureau(picture: "1.circle", name: "Stefan Peters", childs: nil)
-    static let person4 = Bureau(picture: "1.circle", name: "Nico Müller", childs: nil)
-   
-    //Bureaus
-    static let group1 = Bureau(picture: "1.circle", name: "Büro 1", childs: [Bureau.person1, Bureau.person2])
-    static let group2 = Bureau(picture: "1.circle", name: "Büro 2", childs: [Bureau.person3, Bureau.person4])
-}
+let dbBureau = Firestore.firestore().collection("bureaus")
+let fbData = FirebaseData()
 
+class FirebaseData: ObservableObject {
+    
+    @Published var data = [BureauDataType]()
+    
+    init() {
+        readBureauData()
+    }
+    func createBureauData(text1:String) {
+        dbBureau.document().setData(["id" : dbBureau.document().documentID,"title":text1]) { (err) in
+            if err != nil {
+                print((err?.localizedDescription)!)
+                return
+            }else {
+                print("data succesfully added")
+            }
+        }
+    }
+    func readBureauData() {
+        dbBureau.addSnapshotListener { (documentSnapshot, err) in
+            if err != nil {
+                print((err?.localizedDescription)!)
+                return
+            }else {
+                print("data succesfully readed")
+            }
+            
+            documentSnapshot!.documentChanges.forEach { diff in
+                if (diff.type == .added) {
+                    let bureauData = BureauDataType(id: diff.document.documentID, msg: diff.document.get("title") as! String)
+                    self.data.append(bureauData)
+                }
+                if (diff.type == .modified) {
+                    self.data = self.data.map { (Data) -> BureauDataType in
+                        var data = Data
+                        if data.id == diff.document.documentID {
+                            data.msg = diff.document.get("title") as! String
+                            return data
+                        }else {
+                            return Data
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func deleteBureauData(datas: FirebaseData ,index: IndexSet) {
+        let id = datas.data[index.first!].id
+        dbBureau.document(id).delete { (err) in
+            if err != nil {
+                print((err?.localizedDescription)!)
+                return
+            }else {
+                print("data succesfully deleted")
+            }
+            datas.data.remove(atOffsets:index)
+        }
+    }
+    
+    func updateBureauData(id: String, txt: String) {
+        dbBureau.document(id).updateData(["testText":txt]) { (err) in
+            if err != nil {
+                print((err?.localizedDescription)!)
+                return
+            }else {
+                print("update data success")
+            }
+        }
+    }
+}
