@@ -27,6 +27,7 @@
 		4B6E2BAA2610A482005C0546 /* ChatEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BA92610A482005C0546 /* ChatEntryViewModel.swift */; };
 		4B6E2BB22610A4D1005C0546 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BB12610A4D1005C0546 /* ChatView.swift */; };
 		4B6E2BB72610A52D005C0546 /* ChatDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BB62610A52D005C0546 /* ChatDatabase.swift */; };
+		4B6E2BBF2610BF39005C0546 /* BureauDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BBE2610BF39005C0546 /* BureauDataModel.swift */; };
 		4B6EB1DB260A471C000965CD /* TaskDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EB1DA260A471C000965CD /* TaskDatabase.swift */; };
 		65872B180A59E10BA394673F /* Pods_HomeOfficeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C13D322B0B50C2B58AE412 /* Pods_HomeOfficeApp.framework */; };
 		8EB6DC1F034F162DC2B84AF6 /* Pods_HomeOfficeApp_HomeOfficeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF774B4C6A6594DF26CFC931 /* Pods_HomeOfficeApp_HomeOfficeAppUITests.framework */; };
@@ -79,6 +80,7 @@
 		4B6E2BA92610A482005C0546 /* ChatEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEntryViewModel.swift; sourceTree = "<group>"; };
 		4B6E2BB12610A4D1005C0546 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4B6E2BB62610A52D005C0546 /* ChatDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDatabase.swift; sourceTree = "<group>"; };
+		4B6E2BBE2610BF39005C0546 /* BureauDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauDataModel.swift; sourceTree = "<group>"; };
 		4B6EB1DA260A471C000965CD /* TaskDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDatabase.swift; sourceTree = "<group>"; };
 		95D87EF3D98B653CBB97D4F2 /* Pods-HomeOfficeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeApp.release.xcconfig"; path = "Target Support Files/Pods-HomeOfficeApp/Pods-HomeOfficeApp.release.xcconfig"; sourceTree = "<group>"; };
 		A0C13D322B0B50C2B58AE412 /* Pods_HomeOfficeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOfficeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				4B655D292607A08300E04FE2 /* BureauModel.swift */,
+				4B6E2BBE2610BF39005C0546 /* BureauDataModel.swift */,
 				4B655D2E2607A09A00E04FE2 /* TaskModel.swift */,
 				4B6E2B9F2610A434005C0546 /* ChatModel.swift */,
 			);
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6E2BBF2610BF39005C0546 /* BureauDataModel.swift in Sources */,
 				4B655D0426079F5200E04FE2 /* EmployeeView.swift in Sources */,
 				4B655D0E26079F7400E04FE2 /* To-DoView.swift in Sources */,
 				4B6E2BB72610A52D005C0546 /* ChatDatabase.swift in Sources */,

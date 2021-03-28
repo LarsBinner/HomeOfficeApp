@@ -53,6 +53,7 @@ struct ChatEntry: View {
 
     var body: some View {
         HStack {
+            Text("Nachricht:")
             TextField("Nachricht eingeben", text: $chatEntryViewModel.chat.title, onCommit: { self.onCommit(self.chatEntryViewModel.chat)
             })
         }

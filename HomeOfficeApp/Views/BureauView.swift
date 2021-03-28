@@ -4,37 +4,62 @@
 //
 //  Created by Lars Binner on 21.03.21.
 //  Bureau tab view
-
+//
 import SwiftUI
 import Firebase
+import FirebaseFirestore
+
+//struct BureauView: View {
+//    @State private var textValue = ""
+//    @State private var updateRowID = ""
+//    @State private var updateRowValue = ""
+//    @State private var isUpdate = false
+//    @ObservedObject private var datas = fbData
+//
+//    var body: some View {
+//        VStack {
+//            List {
+//                ForEach(datas.data){ data in
+//                    HStack {
+//                        Button(action: {
+//                            self.isUpdate = true
+//                            self.updateRowID = data.id
+//                            self.updateRowValue = data.msg
+//                        }) {
+//                            Text(data.msg)
+//                        }
+//                    }
+//                }.onDelete { (index) in
+//                    fbData.deleteData(datas: self.datas, index: index)
+//                }
+//            }
+//            self.isUpdate ? Text("The value ( \(updateRowValue) ) will chage") : nil
+//            HStack {
+//                Spacer()
+//                TextField("Add text please", text: $textValue).textFieldStyle(RoundedBorderTextFieldStyle())
+//                Button(action: {
+//                    self.sendMessageButton()
+//                }) {
+//                    Text("Do It")
+//                }
+//                Spacer()
+//            }
+//        }
+//    }
+//
+//    func sendMessageButton() {
+//        self.isUpdate ? fbData.updateData(id: self.updateRowID, txt: self.textValue) : fbData.createData(msg1: self.textValue)
+//        self.isUpdate = false
+//        self.textValue = ""
+//    }
+//}
+//
+
+
 
 struct BureauView: View {
-    
-    @State var firstName1 = ""
-    @State var surname1 = ""
-    
     var body: some View {
-        Form {
-            Section(header: Text("Person 1")) {
-                HStack {
-                    TextField("Vorname", text: $firstName1)
-                    TextField("Nachname", text: $surname1)
-                }
-            }
-            Button(action:  {
-                self.addNames(firstName1: self.firstName1, surname1: self.surname1)
-            }) {
-                Text("Übernehmen")
-                    .frame(width: 150, height: 30, alignment: .center)
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(12)
-            }
-        }
-    }
-    func addNames(firstName1: String, surname1: String) {
-        let db = Firestore.firestore()
-        db.collection("bureaus").document().setData(["FirstName": firstName1, "Surname": surname1])
+            Text("Hello World")
     }
 }
 
