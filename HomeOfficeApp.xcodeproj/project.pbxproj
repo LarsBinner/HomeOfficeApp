@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B154C482613588B00517B1E /* BureauModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B154C472613588B00517B1E /* BureauModel.swift */; };
+		4B154C5026135B0B00517B1E /* BureauViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B154C4F26135B0B00517B1E /* BureauViewModel.swift */; };
 		4B398A082607975600B39E09 /* HomeOfficeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B398A072607975600B39E09 /* HomeOfficeAppApp.swift */; };
 		4B398A0C2607975700B39E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B398A0B2607975700B39E09 /* Assets.xcassets */; };
 		4B398A0F2607975800B39E09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B398A0E2607975800B39E09 /* Preview Assets.xcassets */; };
@@ -20,14 +22,12 @@
 		4B655D0E26079F7400E04FE2 /* To-DoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D0D26079F7400E04FE2 /* To-DoView.swift */; };
 		4B655D1F2607A03700E04FE2 /* TaskEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D1E2607A03700E04FE2 /* TaskEntryViewModel.swift */; };
 		4B655D242607A05300E04FE2 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D232607A05300E04FE2 /* TaskListViewModel.swift */; };
-		4B655D2A2607A08300E04FE2 /* BureauModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D292607A08300E04FE2 /* BureauModel.swift */; };
 		4B655D2F2607A09A00E04FE2 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D2E2607A09A00E04FE2 /* TaskModel.swift */; };
 		4B6E2BA02610A434005C0546 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2B9F2610A434005C0546 /* ChatModel.swift */; };
 		4B6E2BA52610A472005C0546 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BA42610A472005C0546 /* ChatListViewModel.swift */; };
 		4B6E2BAA2610A482005C0546 /* ChatEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BA92610A482005C0546 /* ChatEntryViewModel.swift */; };
 		4B6E2BB22610A4D1005C0546 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BB12610A4D1005C0546 /* ChatView.swift */; };
 		4B6E2BB72610A52D005C0546 /* ChatDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BB62610A52D005C0546 /* ChatDatabase.swift */; };
-		4B6E2BBF2610BF39005C0546 /* BureauDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E2BBE2610BF39005C0546 /* BureauDataModel.swift */; };
 		4B6EB1DB260A471C000965CD /* TaskDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EB1DA260A471C000965CD /* TaskDatabase.swift */; };
 		65872B180A59E10BA394673F /* Pods_HomeOfficeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C13D322B0B50C2B58AE412 /* Pods_HomeOfficeApp.framework */; };
 		8EB6DC1F034F162DC2B84AF6 /* Pods_HomeOfficeApp_HomeOfficeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF774B4C6A6594DF26CFC931 /* Pods_HomeOfficeApp_HomeOfficeAppUITests.framework */; };
@@ -54,6 +54,8 @@
 /* Begin PBXFileReference section */
 		2C37E647A19232EFAED338C8 /* Pods-HomeOfficeApp-HomeOfficeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeApp-HomeOfficeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-HomeOfficeApp-HomeOfficeAppUITests/Pods-HomeOfficeApp-HomeOfficeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4AA5D6201EEB202532B8798C /* Pods-HomeOfficeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeOfficeAppTests/Pods-HomeOfficeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B154C472613588B00517B1E /* BureauModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauModel.swift; sourceTree = "<group>"; };
+		4B154C4F26135B0B00517B1E /* BureauViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauViewModel.swift; sourceTree = "<group>"; };
 		4B398A042607975600B39E09 /* HomeOfficeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeOfficeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B398A072607975600B39E09 /* HomeOfficeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOfficeAppApp.swift; sourceTree = "<group>"; };
 		4B398A0B2607975700B39E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,14 +75,12 @@
 		4B655D0D26079F7400E04FE2 /* To-DoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "To-DoView.swift"; sourceTree = "<group>"; };
 		4B655D1E2607A03700E04FE2 /* TaskEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntryViewModel.swift; sourceTree = "<group>"; };
 		4B655D232607A05300E04FE2 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
-		4B655D292607A08300E04FE2 /* BureauModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauModel.swift; sourceTree = "<group>"; };
 		4B655D2E2607A09A00E04FE2 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		4B6E2B9F2610A434005C0546 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		4B6E2BA42610A472005C0546 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
 		4B6E2BA92610A482005C0546 /* ChatEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEntryViewModel.swift; sourceTree = "<group>"; };
 		4B6E2BB12610A4D1005C0546 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4B6E2BB62610A52D005C0546 /* ChatDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDatabase.swift; sourceTree = "<group>"; };
-		4B6E2BBE2610BF39005C0546 /* BureauDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauDataModel.swift; sourceTree = "<group>"; };
 		4B6EB1DA260A471C000965CD /* TaskDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDatabase.swift; sourceTree = "<group>"; };
 		95D87EF3D98B653CBB97D4F2 /* Pods-HomeOfficeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeApp.release.xcconfig"; path = "Target Support Files/Pods-HomeOfficeApp/Pods-HomeOfficeApp.release.xcconfig"; sourceTree = "<group>"; };
 		A0C13D322B0B50C2B58AE412 /* Pods_HomeOfficeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeOfficeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +199,7 @@
 		4B655D1226079FE300E04FE2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4B154C4F26135B0B00517B1E /* BureauViewModel.swift */,
 				4B655D1E2607A03700E04FE2 /* TaskEntryViewModel.swift */,
 				4B655D232607A05300E04FE2 /* TaskListViewModel.swift */,
 				4B6E2BA92610A482005C0546 /* ChatEntryViewModel.swift */,
@@ -210,8 +211,7 @@
 		4B655D282607A05F00E04FE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B655D292607A08300E04FE2 /* BureauModel.swift */,
-				4B6E2BBE2610BF39005C0546 /* BureauDataModel.swift */,
+				4B154C472613588B00517B1E /* BureauModel.swift */,
 				4B655D2E2607A09A00E04FE2 /* TaskModel.swift */,
 				4B6E2B9F2610A434005C0546 /* ChatModel.swift */,
 			);
@@ -488,8 +488,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B6E2BBF2610BF39005C0546 /* BureauDataModel.swift in Sources */,
 				4B655D0426079F5200E04FE2 /* EmployeeView.swift in Sources */,
+				4B154C482613588B00517B1E /* BureauModel.swift in Sources */,
 				4B655D0E26079F7400E04FE2 /* To-DoView.swift in Sources */,
 				4B6E2BB72610A52D005C0546 /* ChatDatabase.swift in Sources */,
 				4B655CF726079F1B00E04FE2 /* BureauView.swift in Sources */,
@@ -500,10 +500,10 @@
 				4B6E2BB22610A4D1005C0546 /* ChatView.swift in Sources */,
 				4B655D242607A05300E04FE2 /* TaskListViewModel.swift in Sources */,
 				4B655D0926079F6900E04FE2 /* HomeScreenView.swift in Sources */,
-				4B655D2A2607A08300E04FE2 /* BureauModel.swift in Sources */,
 				4B655CFF26079F4600E04FE2 /* ContentView.swift in Sources */,
 				4B6E2BAA2610A482005C0546 /* ChatEntryViewModel.swift in Sources */,
 				4B398A082607975600B39E09 /* HomeOfficeAppApp.swift in Sources */,
+				4B154C5026135B0B00517B1E /* BureauViewModel.swift in Sources */,
 				4B6E2BA02610A434005C0546 /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
