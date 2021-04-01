@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		4B154C482613588B00517B1E /* BureauModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B154C472613588B00517B1E /* BureauModel.swift */; };
 		4B154C5026135B0B00517B1E /* BureauViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B154C4F26135B0B00517B1E /* BureauViewModel.swift */; };
+		4B361A4126162B5B00166C52 /* BureauDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B361A4026162B5B00166C52 /* BureauDetailView.swift */; };
 		4B398A082607975600B39E09 /* HomeOfficeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B398A072607975600B39E09 /* HomeOfficeAppApp.swift */; };
 		4B398A0C2607975700B39E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B398A0B2607975700B39E09 /* Assets.xcassets */; };
 		4B398A0F2607975800B39E09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B398A0E2607975800B39E09 /* Preview Assets.xcassets */; };
 		4B398A1A2607975800B39E09 /* HomeOfficeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B398A192607975800B39E09 /* HomeOfficeAppTests.swift */; };
 		4B398A252607975800B39E09 /* HomeOfficeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B398A242607975800B39E09 /* HomeOfficeAppUITests.swift */; };
 		4B398A36260799C600B39E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B398A35260799C600B39E09 /* GoogleService-Info.plist */; };
+		4B54847A261619F70096B59C /* BureauListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B548479261619F70096B59C /* BureauListViewModel.swift */; };
+		4B54848226161B2C0096B59C /* BureauAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B54848126161B2C0096B59C /* BureauAddView.swift */; };
 		4B655CF726079F1B00E04FE2 /* BureauView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655CF626079F1B00E04FE2 /* BureauView.swift */; };
 		4B655CFF26079F4600E04FE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655CFE26079F4600E04FE2 /* ContentView.swift */; };
 		4B655D0426079F5200E04FE2 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B655D0326079F5200E04FE2 /* EmployeeView.swift */; };
@@ -56,6 +59,7 @@
 		4AA5D6201EEB202532B8798C /* Pods-HomeOfficeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeOfficeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeOfficeAppTests/Pods-HomeOfficeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B154C472613588B00517B1E /* BureauModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauModel.swift; sourceTree = "<group>"; };
 		4B154C4F26135B0B00517B1E /* BureauViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauViewModel.swift; sourceTree = "<group>"; };
+		4B361A4026162B5B00166C52 /* BureauDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauDetailView.swift; sourceTree = "<group>"; };
 		4B398A042607975600B39E09 /* HomeOfficeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeOfficeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B398A072607975600B39E09 /* HomeOfficeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOfficeAppApp.swift; sourceTree = "<group>"; };
 		4B398A0B2607975700B39E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		4B398A242607975800B39E09 /* HomeOfficeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOfficeAppUITests.swift; sourceTree = "<group>"; };
 		4B398A262607975800B39E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B398A35260799C600B39E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B548479261619F70096B59C /* BureauListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauListViewModel.swift; sourceTree = "<group>"; };
+		4B54848126161B2C0096B59C /* BureauAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauAddView.swift; sourceTree = "<group>"; };
 		4B655CF626079F1B00E04FE2 /* BureauView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BureauView.swift; sourceTree = "<group>"; };
 		4B655CFE26079F4600E04FE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B655D0326079F5200E04FE2 /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
@@ -190,6 +196,8 @@
 				4B655D0826079F6900E04FE2 /* HomeScreenView.swift */,
 				4B655D0326079F5200E04FE2 /* EmployeeView.swift */,
 				4B655CF626079F1B00E04FE2 /* BureauView.swift */,
+				4B54848126161B2C0096B59C /* BureauAddView.swift */,
+				4B361A4026162B5B00166C52 /* BureauDetailView.swift */,
 				4B655D0D26079F7400E04FE2 /* To-DoView.swift */,
 				4B6E2BB12610A4D1005C0546 /* ChatView.swift */,
 			);
@@ -200,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4B154C4F26135B0B00517B1E /* BureauViewModel.swift */,
+				4B548479261619F70096B59C /* BureauListViewModel.swift */,
 				4B655D1E2607A03700E04FE2 /* TaskEntryViewModel.swift */,
 				4B655D232607A05300E04FE2 /* TaskListViewModel.swift */,
 				4B6E2BA92610A482005C0546 /* ChatEntryViewModel.swift */,
@@ -492,13 +501,16 @@
 				4B154C482613588B00517B1E /* BureauModel.swift in Sources */,
 				4B655D0E26079F7400E04FE2 /* To-DoView.swift in Sources */,
 				4B6E2BB72610A52D005C0546 /* ChatDatabase.swift in Sources */,
+				4B54847A261619F70096B59C /* BureauListViewModel.swift in Sources */,
 				4B655CF726079F1B00E04FE2 /* BureauView.swift in Sources */,
 				4B6E2BA52610A472005C0546 /* ChatListViewModel.swift in Sources */,
 				4B6EB1DB260A471C000965CD /* TaskDatabase.swift in Sources */,
 				4B655D2F2607A09A00E04FE2 /* TaskModel.swift in Sources */,
 				4B655D1F2607A03700E04FE2 /* TaskEntryViewModel.swift in Sources */,
 				4B6E2BB22610A4D1005C0546 /* ChatView.swift in Sources */,
+				4B361A4126162B5B00166C52 /* BureauDetailView.swift in Sources */,
 				4B655D242607A05300E04FE2 /* TaskListViewModel.swift in Sources */,
+				4B54848226161B2C0096B59C /* BureauAddView.swift in Sources */,
 				4B655D0926079F6900E04FE2 /* HomeScreenView.swift in Sources */,
 				4B655CFF26079F4600E04FE2 /* ContentView.swift in Sources */,
 				4B6E2BAA2610A482005C0546 /* ChatEntryViewModel.swift in Sources */,

@@ -27,13 +27,4 @@ class BureauViewModel : ObservableObject {
             }
         }
     }
-    
-    func addBureau(bureau: Bureau) {
-        do {
-            let _ = try databaseBureau.collection("bureaus").addDocument(from: bureau)
-        }
-        catch {
-            print(error)
-        }
-    }
 }
