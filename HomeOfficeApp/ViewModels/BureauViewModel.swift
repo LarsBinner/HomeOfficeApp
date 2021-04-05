@@ -27,4 +27,26 @@ class BureauViewModel : ObservableObject {
             }
         }
     }
+    
+    func deleteData(bureau: Bureau) {
+        databaseBureau.collection("bureaus").document(bureau.id ?? "").delete() { err in
+        if let err = err {
+          print("Error removing document: \(err)")
+        }
+        else {
+          print("Document successfully removed!")
+        }
+      }
+    }
+    
+    func updateData(_ bureau: Bureau) {
+        if let documentId = bureau.id {
+        do {
+          try databaseBureau.collection("bureaus").document(documentId).setData(from: bureau)
+        }
+        catch {
+          print(error)
+        }
+      }
+    }
 }

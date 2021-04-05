@@ -4,7 +4,7 @@
 //
 //  Created by Lars Binner on 01.04.21.
 //
-
+/*
 import Foundation
 import Combine
 import Firebase
@@ -47,3 +47,4 @@ class BureauListViewModel : ObservableObject {
         updateOrAddBureau()
     }
 }
+*/

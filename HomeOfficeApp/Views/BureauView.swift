@@ -14,43 +14,26 @@ struct BureauView: View {
     @ObservedObject private var bureauViewModel = BureauViewModel()
     @State private var openEditor = false
     
-    /*private func bureauListView(bureau: Bureau) -> some View {
-        NavigationLink(destination: BureauDetailView(bureau: bureau)) {
-          VStack(alignment: .leading) {
-            Text(bureau.bureau)
-              .font(.headline)
-            Text(bureau.people)
-              .font(.subheadline)
-          }
-        }
-      } */
-    
     var body: some View {
         NavigationView(){
-            /*List {
-                ForEach (bureauViewModel.bureaus) { bureau in
-                        bureauListView(bureau: bureau)
-                  }
-                }*/
             List(bureauViewModel.bureaus) { bureau in
                 VStack(alignment: .leading) {
                     Text(bureau.bureau)
                         .font(.headline)
                     Text(bureau.people)
                         .font(.subheadline)
+                    Button(action: {
+                        self.bureauViewModel.deleteData(bureau: bureau)
+                    }) {
+                        HStack {
+                            Image(systemName: "minus.square")
+                            Text("Löschen")
+                        }
+                    }
                 }
             }
             .navigationBarTitle("Bürobelegung")
-            /*.toolbar {
-                ToolbarItem {
-                    Button(action: { openEditor.toggle() }, label: {
-                        Image(systemName: "plus")
-                    })
-                }
-            }
-            .sheet(isPresented: $openEditor) {
-                BureauAddView()
-            }*/
+            // Initiales Laden aus Firebase
             .onAppear(){
                 self.bureauViewModel.loadData()
             }
@@ -64,5 +47,3 @@ struct BureauView_Previews: PreviewProvider {
         BureauView()
     }
 }
-
-

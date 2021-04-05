@@ -6,11 +6,13 @@
 //  View model for creating task list for To-DoView
 
 import Foundation
+import FirebaseFirestore
 import Combine
 
 class TaskListViewModel: ObservableObject  {
     // Instanziieren der Fierabase Task Database
     @Published var taskDatabase = TaskDatabase()
+    private var databaseTask = Firestore.firestore()
     
     @Published var taskEntryViewModels = [TaskEntryViewModel]()
     private var cancellables = Set<AnyCancellable>()
@@ -29,20 +31,15 @@ class TaskListViewModel: ObservableObject  {
     func addTask(task: Task) {
         taskDatabase.addToDatabase(task)
     }
+    
+    func deleteTask(task: Task) {
+        databaseTask.collection("tasks").document(task.id ?? "").delete() { err in
+        if let err = err {
+          print("Error removing document: \(err)")
+        }
+        else {
+          print("Document successfully removed!")
+        }
+      }
+    }
 }
-
-
-/* Old Code for taskExample List replaced by taskDatabase Firestore connection
-init() {
- self.taskEntryViewModels = taskExamples.map {task in
-     TaskEntryViewModel(task: task)
- }
-}
- */
-
-/* Old Code for adding task by example list in Task Model replaced by Firestore
-func addTask(task: Task) {
-    let taskViewModel = TaskEntryViewModel(task: task)
-    self.taskEntryViewModels.append(taskViewModel)
-}
-*/

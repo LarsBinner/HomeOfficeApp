@@ -49,6 +49,7 @@ struct To_Do_Previews: PreviewProvider {
 
 struct TaskEntry: View {
     @ObservedObject var taskEntryViewModel: TaskEntryViewModel
+    @ObservedObject var taskListViewModel = TaskListViewModel()
     var onCommit: (Task) -> (Void) = { _ in }
     
     var body: some View {
@@ -59,6 +60,14 @@ struct TaskEntry: View {
                 }
             TextField("Aufgabe formulieren", text: $taskEntryViewModel.task.title, onCommit: { self.onCommit(self.taskEntryViewModel.task)
             })
+            Button(action: {
+                self.taskListViewModel.deleteTask(task: taskEntryViewModel.task)
+            }) {
+                HStack {
+                    Image(systemName: "minus.square")
+                    Text("Löschen")
+                }
+            }
         }
     }
 }
